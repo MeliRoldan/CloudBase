@@ -1,0 +1,546 @@
+@import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*MAIN MENU*/
+
+.navbar {
+    background-color: white;
+    padding: 0px 15px;
+}
+
+.navbar-toggler {
+    margin: 5px 0px;
+    box-shadow: none !important;
+}
+
+.flags_div {
+    margin-right: auto;
+    padding: 0px 15px;
+}
+
+.flags_div button {
+    padding: 0px 1px;
+    border: 1px solid gainsboro;
+}
+
+.flags_div button:hover {
+    color: forestgreen;
+}
+
+
+.flag {
+    border: none;
+    background-color: white;
+    font-size: 13px;
+    font-weight: bold;
+    color: black;
+}
+
+.navbar-brand {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.navbar-brand span {
+    color: #0C5D51;
+    font-size: 14px;
+}
+
+.nav-link {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #023436;
+    text-transform: uppercase;
+}
+
+.nav-link:hover {
+    color: #037971;
+}
+
+.active {
+    color: #037971 !important;
+}
+
+/*CAROUSEL HERO BANNER*/
+
+.carousel {
+    height: 90vh;
+}
+
+.carousel-indicators {
+    width: 50%;
+    margin: auto;
+}
+
+.carousel-indicators button {
+    width: 5%;
+}
+
+.carousel-indicators .active {
+    width: 33%;
+}
+
+.carousel-inner {
+    height: 100%;
+    background-color: white;
+}
+
+.carousel-item {
+    height: 100%;
+}
+
+.carousel-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    filter: contrast(80%);
+    -webkit-animation: zoom 25s;
+    animation: zoom 25s;
+}
+
+.carousel-img-1 {
+    background-image: url(images/Tandem\ Paragliding\ Item\ 1.jpg);
+    background-position: 30% center;
+    filter: contrast(75%);
+}
+
+.carousel-img-2 {
+    background-image: url(images/Tandem\ Paragliding\ Winter\ -\ 3.jpg);
+    background-position: center 70%;
+    filter: brightness(75%);
+}
+
+.carousel-img-4 {
+    background-image: url(images/Tandem\ Paragliding\ Item\ 3.jpg);
+    background-position: center 80%;
+    filter: brightness(85%);
+}
+
+.carousel-img-5 {
+    background-image: url(images/Tandem\ Paragliding\ Item\ 4.jpg);
+    background-position: center 70%;
+    filter: brightness(95%);
+}
+
+@keyframes zoom {
+    from {
+        -webkit-transform: scale(1, 1);
+    }
+
+    to {
+        -webkit-transform: scale(1.3, 1.3);
+    }
+}
+
+.carousel-caption {
+    height: 70%;
+    position: absolute;
+    left: 7.33%;
+    top: 55%;
+    transform: translateY(-55%);
+    text-align: start;
+}
+
+.data-tran-geo {
+    font-size: 23px;
+}
+
+.carousel-caption h1 {
+    position: absolute;
+    top: 30%;
+    text-transform: uppercase;
+    font-size: 20px;
+    visibility: hidden;
+    animation-name: text-animation;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.carousel-caption p {
+    position: absolute;
+    top: 50%;
+    width: 63.3333333%;
+    font-size: 18px;
+    text-transform: uppercase;
+    visibility: hidden;
+    animation-name: text-animation;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes text-animation {
+    from {
+        visibility: hidden;
+        left: 0%;
+    }
+
+    to {
+        visibility: visible;
+        left: 5%;
+    }
+}
+
+@media (max-width: 1050px) {
+    .carousel-caption p {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-caption p {
+        font-size: 16px;
+    }
+}
+
+/*SERVICES LIST*/
+
+main {
+    height: auto;
+}
+
+.card {
+    border: none;
+    border-radius: 0px;
+    padding: 0px;
+}
+
+.card-body {
+    position: relative;
+    z-index: 0;
+}
+
+.card-body h2 {
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    font-size: 18px;
+    padding: 15px 0px;
+}
+
+.card-body p {
+    font-size: 15.7px;
+}
+
+.services-small-col {
+    height: 383px;
+}
+
+.services-big-col {
+    height: 483px;
+}
+
+.card-body button {
+    padding: 6px 25px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 0%;
+    background-color: #317F79;
+    border-color: #317F79;
+    color: white;
+}
+
+.card-body button:hover {
+    background-color: white;
+    color: #317F79;
+    border-color: #317F79;
+}
+
+.services-img {
+    height: 383px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    overflow: hidden;
+}
+
+.services-img-big {
+    height: 483px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    overflow: hidden;
+}
+
+@media (max-width:575px) {
+    .services-small-col {
+        height: auto;
+    }
+
+    .services-big-col {
+        height: auto;
+    }
+
+    /* .services-img {
+        height: 225px;
+    }
+
+    .services-img-big {
+        height: 325px;
+    } */
+}
+
+.footer {
+    background-color: rgb(255, 255, 255);
+    color: #317F79;
+}
+
+.col-img {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.social {
+    font-size: 20px;
+    padding-right: 6px;
+}
+
+.bi-facebook {
+    color: #0866FF;
+}
+
+.bi-instagram {
+    color: #d6249f;
+    color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+.bi-whatsapp {
+    color: #037971;
+}
+
+.bi-telegram {
+    color: #2481CC;
+}
+
+.bi-snapchat {
+    color: black;
+    background-color: yellow;
+    padding-right: 0;
+    border-radius: 50%;
+}
+
+@media (max-width:768px) and (min-width:362px) {
+    .logo-div {
+        margin: auto;
+    }
+}
+
+.logo-div {
+    width: 120px !important;
+    height: 120px !important;
+}
+
+.logo-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer ul {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer ul li a,
+.footer ul li {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #037971;
+    text-decoration: none;
+}
+
+.footer ul li a:hover,
+.footer ul li:hover {
+    color: #03b5aa;
+}
+
+.bi:hover {
+    color: #03b5aa;
+}
+
+.l-container {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.video-div {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    height: 500px;
+}
+
+/* .video-div {
+    margin: auto;
+    padding: 0;
+    padding-top: 50px;
+    height: 500px;
+} */
+
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.card-title {
+    text-transform: uppercase;
+}
+
+.card-img-top {
+    height: auto;
+}
+
+.map span {
+    text-decoration: underline;
+}
+
+.map i {
+    font-size: 14px;
+    color: rgb(19, 170, 160);
+    font-weight: 600;
+}
+
+.about-img-1, .about-img-2, .about-img-3, .about-img-4 {
+    background-size: cover;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+}
+
+.about-img-1 {
+    background-image: url(images/fb-team1.jpg);
+}
+
+.about-img-2 {
+    background-image: url(images/fb-team2.jpg);
+}
+
+.about-img-3 {
+    background-image: url(images/fb-team3.jpg);
+}
+
+.about-img-4 {
+    background-image: url(images/fb-team5.jpg);
+    background-position: center 40%;
+}
+
+@media (max-width: 800px) {
+    images-flex {
+        flex-wrap:wrap;
+    }
+
+    images-flex img {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.copy , .email-text {
+    text-transform: none;
+    color: #317F79;
+    text-decoration: none;
+}
+
+/* SWIPER SECTION */
+.swiper {
+    width: 100%;
+    height: 300px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Loader styling */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .image-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image {
+    width: 170px; /* Adjust image size */
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  #image1 {
+    animation: appearCenter 1s forwards;
+  }
+  
+  #image2 {
+    position: absolute;
+    top: -90px; /* Position above the center */
+  }
+  
+  #image3 {
+    position: absolute;
+    top: 90px; /* Position below the center */
+  }
+  
+  /* Animation for fading in the image */
+  @keyframes appearCenter {
+    0% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes appearAbove {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes appearBelow {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Hidden by default until animation */
+  .hidden {
+    opacity: 0;
+  }  
