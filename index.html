@@ -1,0 +1,283 @@
+  <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="CloudBase Paragliding Gudauri offers tandem paragliding adventures. Experienced pilots guide passengers on exhilarating flights over the breathtaking Gudauri scenery.Book your flight today!">
+        <meta name="keywords" content="Tandem Paragliding Gudauri, Paragliding Flights Gudauri, Gudauri Ski Resort Paragliding, Tandem Paragliding Georgia, Tandem Paragliding Tours Georgia, Paragliding in Gudauri Ski Resort, Georgia Tandem Paragliding Flights, Book Tandem Paragliding, Book Paragliding Flights, Book Paragliding in Gudauri, Book Paragliding in Georgia, Paragliding, Tandem Paragliding, Tours in Georgia, Tours in Gudauri, Gudauri Ski Resort, Georgia Gudauri, Gudauri Georgia, Gudauri, Spring Activities in Gudauri, Summer Activities in Gudauri, Autumn Activities in Gudauri, Winter Activities in Gudauri,Activities in Gudauri, Activities in Georgia, Tandem Paragliding Tbilisi, Tandem Paragliding Kakheti, Paragliding in Tbilisi, Paragliding in Kakheti, Paragliding in Georgia, Book Paragliding in Tbilisi, Book Paragliding in Kakheti, Tandem Paragliding Gonio, Tandem Paragliding Seaside Georgia, Paragliding in Gonio, Paragliding in Batumi, Book Paragliding in Batumi, Book Paragliding in Gonio"> 
+        <title>CloudBase Tandem Paragliding - Gudauri</title>
+        <link rel="icon" type="image/x-icon" href="images/CloudBase Tandem Paragliding - Gudauri - small green logo.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" integrity="sha384-eoTu3+HydHRBIjnCVwsFyCpUDZHZSFKEJD0mc3ZqSBSb6YhZzRHeiomAUWCstIWo" crossorigin="anonymous">
+    </head>
+    <body>
+      <div id="loader">
+        <div class="image-container">
+          <img src="images/logo-part-2.jpg" alt="First Image" id="image1" class="image hidden"> <!-- Center Image -->
+          <img src="images/logo-part-1.jpg" alt="Second Image" id="image2" class="image hidden"> <!-- Above -->
+          <img src="images/logo-part-3.jpg" alt="Third Image" id="image3" class="image hidden"> <!-- Below -->
+        </div>
+      </div>
+      
+      <div id="content" style="display:none;" class="container-fluid m-0 p-0">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light" id="nav">
+          <!--NAVBAR-TOGGLE-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"  aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!--NAVBAR-BRAND-->
+          <div class="flags_div d-inline">
+            <a class="navbar-brand" href="index.html" title="CloudBase Homepage"><span>CloudBase</span></a>
+            <button class="flag" onclick="setCurLanguage('eng')">EN</button>
+            <button class="flag" onclick="setCurLanguage('geo')">GE</button>
+          </div>
+          <!--NAVBAR_COLLAPSE-->
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <!--NAVBAR UL/LI/A-->
+            <ul class="navbar-nav m-auto">
+              <li class="nav-item">
+                <a class="translatable-text nav-link active" data-tran-eng="Home" data-tran-geo="მთავარი" aria-current="page" id="index" href="index.html" title="CloudBase Homepage">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="translatable-text nav-link" data-tran-eng="About us" data-tran-geo="ჩვენს შესახებ" id="about" href="about.html" title="CloudBase Team">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="translatable-text nav-link" data-tran-eng="Blog" data-tran-geo="ბლოგი" id="blog" href="blog.html" title="CloudBase Blog">Blog</a>
+              </li>
+            </ul>
+          </div>
+          <ul class="navbar-nav">
+            <li>
+              <a title="CloudBase Facebook page" target="_blank" href="https://www.facebook.com/CloudBaseGeorgia"><i class="bi bi-facebook social"></i></a>
+              <a title="CloudBase Instagram page" target="_blank" href="https://www.instagram.com/cloudbase.paragliding/?hl=en"><i class="bi bi-instagram social"></i></a>
+              <a title="CloudBase Whatsapp link" target="_blank" href="https://wa.me/995511203030"><i class="bi bi-whatsapp social"></i></a>
+              <a title="CloudBase Telegram link" target="_blank" href="https://t.me/cloudbaseparaglidinggeorgia"><i class="bi bi-telegram social"></i></a>
+              <a title="CloudBase Snapchat link" target="_blank" href="https://www.snapchat.com/add/cloudbase2021?share_id=w9XfqkFaqVU&locale=en-US" class="snapchat-a"><i class="bi bi-snapchat social"></i></a>
+            </li>
+          </ul>
+        </nav>
+        <!--CAROUSEL, მთავარის გვერდის ჰედერი-->
+        <header id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-touch="true">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="6000">
+              <div class="carousel-img-1 carousel-img" fetchpriority="high"></div>
+              <div class="carousel-caption">
+                <h1><span class="translatable-text" data-tran-eng="Welcome to Cloudbase Paragliding" data-tran-geo="განიცადეთ პარაგლაიდინგის თავგადასავალი">Experience the Thrill of Paragliding</span></h1>
+                <p><span class="translatable-text" data-tran-eng="Georgia's premier tandem paragliding destination. With 7+ years of experience, we offer thrilling and safe adventures in Gudauri's stunning mountains." data-tran-geo="შემოგვიერთდით დაუვიწყარი პარაგლაიდინგის თავგადასავლებისთვის გუდაურში. იგრძენით ფრენის თავისუფლება ჩვენს სერტიფიცირებულ და გამოცდილ პილოტებთან ერთად.">Welcome to Cloudbase Paragliding, your premier destination for tandem paragliding in the breathtaking landscapes of Georgia. With over seven years of experience, we are proud to offer an exhilarating and safe paragliding experience in the stunning mountains of Gudauri.</span></p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="8000">
+              <div class="carousel-img-2 carousel-img" fetchpriority="low"></div>
+              <div class="carousel-caption">
+                <h1><span class="translatable-text" data-tran-eng="Why CloudBase Paragliding?" data-tran-geo="რატომ CloudBase-სი?">Why CloudBase?</span></h1>
+                <p><span class="translatable-text" data-tran-eng="Safety and satisfaction are our top priorities. Our highly skilled pilots are fully licensed, insured, and have extensive experience in tandem paragliding." data-tran-geo="ჩვენ გაწვთნილები ვართ არა მხოლოდ პარაგლიდინგში, არამედ საჭირო მეტეოროლოგიურ საფუძვლებში, საგანგებო პროცედურებში როგორც მიწაზე, ასევე ცაში და პირველად დახმარებაში, რათა ვუზრუნველყოთ უსაფრთხოება.">At Cloudbase Paragliding, safety and satisfaction are our top priorities. Our team of highly skilled pilots is fully licensed, insured, and has extensive experience in tandem paragliding. We are dedicated to providing you with a memorable and secure flight experience, ensuring that you can fully enjoy the majestic views of the mountains.</span></p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="12000">
+              <div class="carousel-img-4 carousel-img" fetchpriority="low"></div>
+              <div class="carousel-caption">
+                <h1><span class="translatable-text" data-tran-eng="More Than Just a Flight" data-tran-geo="მეტი ვიდრე უბრალოდ ფრენა">More Than Just a Flight</span></h1>
+                <p><span class="translatable-text" data-tran-eng="Join us for an amazing adventure. Whether you love thrills or want to enjoy the calm of flight, we offer an experience like no other." data-tran-geo="გეგმავთ კორპორატიულ ღონისძიებას? ან განსაკუთრებულ სიურპრიზს საყვარელი ადამიანისთვის? ჩვენ დაგეხმარებით, რომ თქვენი მომენტები მართლაც დაუვიწყარი გავხადოთ.">Join us for an unforgettable adventure. Whether you’re a thrill-seeker looking for your next adrenaline rush or someone who wants to experience the serenity of flight, Cloudbase Paragliding promises an experience like no other.</span></p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="14000">
+              <div class="carousel-img-5 carousel-img" fetchpriority="low"></div>
+              <div class="carousel-caption">
+                <h1><span class="translatable-text" data-tran-eng="Reach for the Sky" data-tran-geo="რატომ Cloudbase?">Reach for the Sky</span></h1>
+                <p><span class="translatable-text" data-tran-eng="Discover the beauty of Gudauri from a whole new perspective with Cloudbase Paragliding. Let us take you to new heights!" data-tran-geo="ჩვენ გვაქვს საქართველოს სხვადასხვა კუთხეებში ფრენის დიდი გამოცდილება. ჩვენ არ ვართ მხოლოდ კომერციული პილოტები; ჩვენ პარაგლაიდინგის პროფესიონალი ენთუზიასტები ვართ და მუდმივად ვვითარდებით, რათა ვუზრუნველყოთ საუკეთესო გამოცდილება.">Discover the beauty of Gudauri from a whole new perspective with Cloudbase Paragliding. Let us take you to new heights!</span></p>
+              </div>
+            </div>
+            <button class="carousel-control-prev pe-4" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next ps-4" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </header>
+        
+        <!--SERVICES, სერვისების კონტეინერი-->
+        <main class="container-fluid p-0 m-0 row row-cols-md-2 row-cols-sm-1 border-bottom mb-5">
+          <div class="col col-lg-6 col-md-12 col-12 card">
+            <div class="row g-0 row-cols-md-2 row-cols-1 ">
+              <div class="col-md-6 col-sm-6 col-12 p-0 m-0 order-sm-2 order-md-2 order-lg-1">
+                <div class="card-body services-small-col">
+                  <h2 class="pt-4"> <span class="translatable-text" data-tran-eng="Why Gudauri?" data-tran-geo="პარაპლანით ფრენა">Why Gudauri?</span></h2>
+                  <p><span class="translatable-text" data-tran-eng="Gudauri is a paragliding paradise, offering incredible flights year-round, even amid snowy mountains. The ever-changing weather adds extra excitement and unpredictability to each flight, which we expertly navigate for a safe and thrilling adventure." data-tran-geo="პარაპლანით ფრენები ულამაზეს გუდაურში, ჩვენ ვუზრუნველყოფთ დაუვიწყარ თავგადასავალს ჩვენი გამოცდილი პილოტების გუნდით.">Gudauri is a paragliding paradise, offering incredible flying opportunities in every season, even amidst snowy mountains. The ever-changing weather conditions, influenced by the mountainous terrain, add an extra element of excitement and unpredictability to each flight. Our experienced pilots are well-versed in navigating these conditions, ensuring a safe and thrilling adventure every time.</span></p>
+                  <a target="_blank" href="https://wa.me/995511203030"><button type="button" class="translatable-text btn btn-outline-success booknow-btn" data-tran-eng="Book now" data-tran-geo="დაჯავშნე ახლა"><span>Book now</span></button></a>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-12 p-0 m-0 border-0 order-sm-1 order-md-1 order-lg-2 services">
+                <img src="images/Tandem Acro Paragliding in Gudauri.jpg" class="services-img" alt="Tandem Paragliding in Gudauri Mountains" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="col col-lg-6 col-md-12 col-12 card">
+            <div class="row g-0 row-cols-md-2 row-cols-1">
+              <div class="col-md-6 col-sm-6 col-12 p-0 m-0">
+                <div class="card-body services-small-col">
+                  <h2 class="pt-4"> <span class="translatable-text" data-tran-eng="Safety Measures" data-tran-geo="უსაფრთხოება და აღჭურვილობა">Safety</span></h2>
+                  <p><span class="translatable-text" data-tran-eng="Safety is our top priority. Measures we use to ensure your flight is safe include:
+                    <br>
+                   
+                    Experienced Pilots; Weather Monitoring; Pre-Flight Briefing;<br>
+                    Regular Equipment Inspections; Helmet; Reserve Parachute;<br>
+                    Communication Devices; Protective Clothing.
+                    " data-tran-geo="ჩვენ პრიორიტეტს ვანიჭებთ თქვენს და ჩვენს უსაფრთხოებას ჩვენი აღჭურვილობის სტანდარტებთან შესაბამისობაში შენარჩუნებით.">At Cloudbase Paragliding, your safety is our top priority. Our safety measures and equipment we use to ensure your flight is both thrilling and safe include: 
+                    Safety Mesures: Experienced Pilots; Weather Monitoring; Pre-Flight Briefing; Regular Equipment Inspections.
+                    Paragliding Equipment: Paraglider Wing; Harness; Helmet; Reserve Parachute; Communication Devices; Protective Clothing.
+                    Cloudbase Paragliding ensures a safe and exhilarating experience for all our guests. Soar with confidence and enjoy the breathtaking beauty of Gudauri with us!                    
+                    </span></p>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-12 p-0 m-0 border-0">
+                <img src="images/Tandem Paragliding Section 2.jpg" class="services-img" alt="Tandem Paragliding in Winer Gudauri" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="col col-md-12 col-12 card">
+            <div class="row g-0 row-cols-md-2 row-cols-1">
+              <div class="col-md-6 col-sm-6 col-12 p-0 m-0 border-0 order-2 order-sm-1 order-md-1 order-lg-1">
+                <img src="images/Tandem Paragliding Section 3-2.jpg" class="services-img-big" alt="Tandem Paragliding in Gonio Seaside" loading="lazy">
+              </div>
+              <div class="col-md-6 col-sm-6 col-12 p-0 m-0 order-1 order-sm-2 order-md-2 order-lg-2">
+                <div class="card-body services-big-col">
+                  <h2 class="pt-4"> <span class="translatable-text" data-tran-eng="Our Pilots" data-tran-geo="ჩვენი პილოტები">Our Pilots</span></h2>
+                  <p><span class="translatable-text" data-tran-eng="We are proud of our skilled and dedicated pilots who bring extensive experience, training, and passion for paragliding to ensure a safe and unforgettable flight experience. <br><br> When you fly with Cloudbase Paragliding, you are flying with a team of pilots who are licensed and safety-conscious. Join us for an adventure and let our skilled pilots take you to new heights!                    
+                    " data-tran-geo="7 წლამდე გამოცდილებით, ჩვენი მფრინავები სერტიფიცირებული არიან საქართველოს პარაგლადინგის ფედერაციის მიერ და გავლილი აქვთ სწავლება როგორც თეორიულ, ასევე პრაქტიკულ ასპექტებში, მათ შორის პირველადი დახმარებისა და გადაუდებელი პროცედურების შესახებ.">We take immense pride in our team of highly skilled and dedicated pilots. Each pilot brings a wealth of experience, extensive training, and a passion for paragliding, ensuring you have a safe and unforgettable flight experience.
+                    <br>
+                    <br>
+                    When you fly with Cloudbase Paragliding, you are flying with a team of pilots who are,licensed, and safety-conscious.
+                    </span></p>
+                  <a target="_blank" href="https://wa.me/995511203030"><button type="button" class="translatable-text btn btn-outline-success booknow-btn" data-tran-eng="Book Your Flight" data-tran-geo="დაჯავშნე ახლა"><span>Book now</span></button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-lg-6 col-md-12 col-12 card">
+            <div class="row g-0 row-cols-md-2 row-cols-1">
+              <div class="col-md-6 col-sm-6 col-12 p-0 m-0">
+                <div class="card-body services-small-col">
+                  <h2 class="pt-4"> <span class="translatable-text" data-tran-eng="Solo & X-country Paragliding" data-tran-geo="თავგადასავლებისკენ">Solo & X-country Paragliding</span></h2>
+                  <p><span class="translatable-text" data-tran-eng="Our pilots are not only highly skilled but also dedicated to ongoing training, including cross-country paragliding in solo flights. <br><br> Our continuous improvement ensures we bring the highest level of expertise and safety to every flight." data-tran-geo="ჩვენი გვიყვარს მოგზაურობაც და ადამიანებთან შეხვედრა. ამიტომ ვქმნით საუკეთესო გამოცდილებას ჩვენი თავგადასავლების მოყვარული მეგობრებისთვის.">Our pilots are not only highly skilled but also dedicated to ongoing training, including cross-country paragliding in solo flights. Our continuous improvement ensures they bring the highest level of expertise and safety to every flight.</span></p>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-12 p-0 m-0 border-0">
+                <img src="images/Tandem Paragliding Section 4.JPG" class="services-img" alt="Tandem Paragliding in Autumn Gudauri" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="col col-lg-6 col-md-12 col-12 card">
+            <div class="row g-0 row-cols-md-2 row-cols-1">
+              <div class="col-md-6 col-sm-6 col-12 p-0 m-0 order-sm-2 order-md-2 order-lg-1">
+                <div class="card-body services-small-col">
+                  <h2 class="pt-4"> <span class="translatable-text" data-tran-eng="Inclusivity & Accessibility" data-tran-geo="ჯანმრთელობის დაზღვევა">Inclusivity & Accessibility</span></h2>
+                  <p><span class="translatable-text" data-tran-eng="We are dedicated to inclusivity and accessibility and are proud to accommodate customers with disabilities, including those who use wheelchairs. Our pilots are skilled in providing a safe and exhilarating flying experience for everyone." data-tran-geo="იფრინეთ მშვიდად, ჩვენი ჯანმრთელობის დაზღვევით, რაც უზრუნველყოფს თქვენსა და ჩვენს უშფოთველ თავგადასავალს.">At Cloudbase Paragliding, we are dedicated to inclusivity and accessibility. We are proud to accommodate customers with disabilities, including those who use wheelchairs. Our licensed, experienced, and insured pilots are skilled in providing a safe and exhilarating flying experience for everyone, ensuring that each flight is as enjoyable and memorable as possible.</span></p>
+                  <a target="_blank" href="https://wa.me/995511203030"><button type="button" class="translatable-text btn btn-outline-success booknow-btn" data-tran-eng="Book now" data-tran-geo="დაჯავშნე ახლა"><span>Book now</span></button></a>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-12 p-0 m-0 border-0 order-sm-1 order-md-1 order-lg-2">
+                <img src="images/Tandem Paragliding Section 5.jpg" class="services-img" alt="Tandem Paragliding in clouds in Gudauri" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </main>
+        
+        <!---FOOTER-->
+        <footer class="container-fluid bg-white pb-5">
+          <div class="footer row row-cols-lg-3 row-cols-md-3  row-cols-sm-2 row-cols-1 justify-content-around m-0 pt-5 pb-5">
+            <!--UL/LI მენიუ-->
+            <div class="col w-auto">
+              <ul class="p-0 m-0" style="list-style-type: none;">
+                <li class="py-2">
+                  <a title="CloudBase Team" class="pe-3" id="about" href="about.html"><span class="translatable-text" data-tran-eng="About us" data-tran-geo="ჩვენს შესახებ">About us</span></a>
+                  <a title="CloudBase Blog" class="" id="blog" href="blog.html"><span class="translatable-text" data-tran-eng="Blog" data-tran-geo="ბლოგი">Blog</span></a>
+                </li>
+                <!--UL/LI სოციალური მედიის ღილაკები-->
+                <li class="pt-2">
+                  <a title="CloudBase Facebook page" target="_blank" href="https://www.facebook.com/CloudBaseGeorgia"><i
+                      class="bi bi-facebook social"></i></a>
+                  <a title="CloudBase Instagram page" target="_blank" href="https://www.instagram.com/cloudbase.paragliding/?hl=en"><i
+                      class="bi bi-instagram social"></i></a>
+                  <a title="CloudBase Whatsapp link" target="_blank" href="https://wa.me/995511203030"><i class="bi bi-whatsapp social"></i></a>
+                  <a title="CloudBase Telegram link" target="_blank" href="https://t.me/cloudbaseparaglidinggeorgia"><i class="bi bi-telegram social"></i></a>
+                  <a title="CloudBase Snapchat link" target="_blank" href="https://www.snapchat.com/add/cloudbase2021?share_id=w9XfqkFaqVU&locale=en-US"><i class="bi bi-snapchat social"></i></a>
+                </li>
+                <!--გვერდის კოფირაითი-->
+                <li class="py-2 copy" style="font-size: 14px;">&copy CloudBase Paragliding </li>
+              </ul>
+            </div>
+            <!--UL/LI საკონტაქტო ინფორმაცია-->
+            <div class="col w-auto">
+              <ul class="p-0 m-0" style="list-style-type: none;">
+                <li class="py-2">
+                  <a href="https://maps.app.goo.gl/Tdak3XWpgoiqnDBF9" target="_blank" class="map">
+                    <i class="bi bi-geo-alt-fill" style="font-size: 15px;"></i>
+                    <span class="translatable-text" data-tran-eng="Our location" data-tran-geo="ჩვენი ლოკაცია">Our location</span>
+                  </a>
+                </li>
+                <li class="py-2" style="font-size: 15px;">+995 555 35 30 30</li>
+                <li class="py-1 email-text" style="font-size: 14px;">cloudbase@gmail.com</li>
+              </ul>
+            </div>
+            <!--UL ლოგო-->
+            <div class="col w-auto logo-div p-0 m-0">
+              <img src="images/logo-small.jpg" alt="CloudBase ParagLiding Logo">
+            </div>
+          </div>
+        </footer>
+      </div>
+      
+      <!--SCRIPTS-->
+      <script src="js.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+      <script>
+        // Define the getCookie function
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+    
+        // Define the setCookie function
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days*24*60*60*1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+        }
+    
+        // Define the setCurLanguage function
+        function setCurLanguage(lang) {
+            if (!lang) lang = getCookie('cur_lang'); // get from saved cookie
+            if (!lang || lang != 'eng' && lang != 'geo') lang = 'eng'; // check and set default
+            setCookie('cur_lang', lang, 30);
+    
+            document.querySelectorAll(".translatable-text").forEach(function (value) {
+                value.innerHTML = value.getAttribute(`data-tran-${lang}`);
+            });
+        }
+    
+        // Run the setCurLanguage function on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            setCurLanguage(); // changes all text to default language
+        });
+      </script>
+    </body>
+  </html>
