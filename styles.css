@@ -8,7 +8,6 @@
 }
 
 /*MAIN MENU*/
-
 .navbar {
     background-color: white;
     padding: 0px 15px;
@@ -68,7 +67,6 @@
 }
 
 /*CAROUSEL HERO BANNER*/
-
 .carousel {
     height: 90vh;
 }
@@ -202,7 +200,6 @@
 }
 
 /*SERVICES LIST*/
-
 main {
     height: auto;
 }
@@ -278,19 +275,25 @@ main {
     .services-big-col {
         height: auto;
     }
-
-    /* .services-img {
-        height: 225px;
-    }
-
-    .services-img-big {
-        height: 325px;
-    } */
 }
 
 .footer {
     background-color: rgb(255, 255, 255);
     color: #317F79;
+    justify-content: space-between;
+}
+
+@media (max-width: 667px) and (min-width: 543px) {
+    .footer {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 393px) {
+    .footer {
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 .col-img {
@@ -330,6 +333,11 @@ main {
     border-radius: 50%;
 }
 
+.bi-snapchat:hover {
+    color: white !important;
+    background-color: #03b5aa;
+}
+
 @media (max-width:768px) and (min-width:362px) {
     .logo-div {
         margin: auto;
@@ -337,13 +345,14 @@ main {
 }
 
 .logo-div {
-    width: 120px !important;
-    height: 120px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo-div img {
     width: 100%;
-    height: 100%;
+    height: 120px;
     object-fit: cover;
 }
 
@@ -382,13 +391,6 @@ main {
     height: 500px;
 }
 
-/* .video-div {
-    margin: auto;
-    padding: 0;
-    padding-top: 50px;
-    height: 500px;
-} */
-
 video {
     object-fit: cover;
     width: 100%;
@@ -401,10 +403,6 @@ video {
 
 .card-img-top {
     height: auto;
-}
-
-.map span {
-    text-decoration: underline;
 }
 
 .map i {
@@ -466,7 +464,7 @@ video {
     object-fit: cover;
 }
 
-/* Loader styling */
+/* Loader*/
 #loader {
     position: fixed;
     width: 100%;
@@ -476,71 +474,204 @@ video {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-  }
-  
-  .image-container {
+}
+
+.image-container {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .image {
-    width: 170px; /* Adjust image size */
+    overflow: hidden;
+}
+
+.image {
+    width: 270px;
+    height: 0;
+    opacity: 0;
+    transition: height 5s ease-out, opacity 5s ease-out;
+}
+
+#image1.reveal {
     height: auto;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-  
-  #image1 {
-    animation: appearCenter 1s forwards;
-  }
-  
-  #image2 {
-    position: absolute;
-    top: -90px; /* Position above the center */
-  }
-  
-  #image3 {
-    position: absolute;
-    top: 90px; /* Position below the center */
-  }
-  
-  /* Animation for fading in the image */
-  @keyframes appearCenter {
-    0% {
-      opacity: 0;
-      transform: translateY(0);
+    opacity: 1;
+}
+
+/* RESERVATION */
+#book-main {
+    background-image: url(images/Book\ Paragliding.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    height: 553px;
+    margin-top: 40px;
+}
+
+.book-header {
+    width: 100%;
+    height: 100%;
+}
+
+.book-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-book {
+    background-color: rgb(62, 169, 161);
+    border-color: rgb(62, 169, 161);
+    text-transform: uppercase;
+    width: 50% !important;
+}
+
+@media (max-width: 1245px) {
+    .book-form {
+        width: 35% !important;
     }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
+}
+
+
+@media (max-width: 1070px) {
+    #book-main {
+        height: 550px;
     }
-  }
-  
-  @keyframes appearAbove {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px);
+
+    .book-form {
+        width: 40% !important;
+    } 
+}
+
+@media (max-width: 925px) {
+    .book-form {
+        width: 45% !important;
     }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
+}
+
+@media (max-width: 845px) {
+    .book-form {
+        width: 50% !important;
     }
-  }
-  
-  @keyframes appearBelow {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
+}
+
+@media (max-width: 750px) {
+    .book-form {
+        width: 60% !important;
     }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
+}
+
+@media (max-width: 650px) {
+    .book-form {
+        width: 100% !important;
     }
-  }
-  
-  /* Hidden by default until animation */
-  .hidden {
-    opacity: 0;
-  }  
+}
+
+.book-form {
+    background-color: rgba(255, 255, 255, 0.57);
+    padding: 20px 25px;
+    margin: 10px;
+    width: 30%;
+}
+
+.form-select option {
+    text-transform: uppercase;
+} 
+
+.price , .bookCost {
+    color: #037971;
+    
+}
+
+.terms a {
+    color: #037971;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    color: green;
+}
+
+.terms a {
+    font-size: 16px;
+}
+
+
+input[type="text"]:focus,
+input[type="checkbox"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+.form-select:focus {
+    border-color: rgba(19, 170, 160, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(19, 170, 160, 0.6);
+    outline: 0 none;
+}
+
+input[type="checkbox"]:checked {
+    background-color: rgb(19, 170, 160);
+    border-color: rgb(19, 170, 160);
+}
+
+/* PHONE CODES DROPDOWN */
+.iti {
+    width: 100%;
+    position: relative;
+    top: -5px;
+}
+
+.iti__selected-flag {
+    top: 8px;
+    height: 33px !important;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+input#phone {
+    padding-left: 87px !important;
+    top: 6px;
+    visibility: visible !important;
+}  
+
+.intl-tel-input .flag-dropdown .selected-flag {
+  padding: 11px 16px 11px 6px;
+}
+
+.intl-tel-input {
+  z-index: 99;
+  width: 100%;
+}
+
+.iti-flag {
+  box-shadow: none;
+}
+
+.intl-tel-input .selected-flag:focus {
+  outline: none;
+}
+
+.iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+    background-color: rgba(0, 0, 0, 0.05);
+}  
+
+.iti--allow-dropdown input{
+    padding-right: 6px;
+    padding-left: 52px;
+    margin-left: 0;
+}
+
+.iti__country-list {
+    border-radius: 4px !important;
+    z-index: 1 !important;
+    box-shadow: 0 0 16px 0 rgb(0 0 0 / 8%) !important;
+    border: 1px solid #ececec !important;
+    width: 270px !important;
+}
