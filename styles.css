@@ -30,7 +30,6 @@
     color: forestgreen;
 }
 
-
 .flag {
     border: none;
     background-color: white;
@@ -102,25 +101,25 @@
 }
 
 .carousel-img-1 {
-    background-image: url(images/Tandem\ Paragliding\ Item\ 1.jpg);
-    background-position: 30% center;
+    background-image: url(images/Tandem\ Paragliding\ Item\ 1.webp);
+    background-position: 80% 40%;
     filter: contrast(75%);
 }
 
 .carousel-img-2 {
-    background-image: url(images/Tandem\ Paragliding\ Winter\ -\ 3.jpg);
+    background-image: url(images/Tandem\ Paragliding\ Winter\ -\ 3.webp);
     background-position: center 70%;
     filter: brightness(75%);
 }
 
 .carousel-img-4 {
-    background-image: url(images/Tandem\ Paragliding\ Item\ 3.jpg);
+    background-image: url(images/Tandem\ Paragliding\ Item\ 3.webp);
     background-position: center 80%;
     filter: brightness(85%);
 }
 
 .carousel-img-5 {
-    background-image: url(images/Tandem\ Paragliding\ Item\ 4.jpg);
+    background-image: url(images/Tandem\ Paragliding\ Item\ 4.webp);
     background-position: center 70%;
     filter: brightness(95%);
 }
@@ -135,53 +134,45 @@
     }
 }
 
-.carousel-caption {
-    height: 70%;
-    position: absolute;
-    left: 7.33%;
-    top: 55%;
-    transform: translateY(-55%);
-    text-align: start;
-}
-
 .data-tran-geo {
     font-size: 23px;
 }
 
-.carousel-caption h1 {
+.carousel-caption {
+    height: 70%;
     position: absolute;
-    top: 30%;
+    left: 9.33%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: start;
+}
+
+.carousel-caption h1,
+.carousel-caption p {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(-20px); /* Start slightly above */
+    animation: drop-in 0.8s ease-out forwards;
     text-transform: uppercase;
+}
+
+.carousel-caption h1 {
+    top: 30%;
     font-size: 20px;
-    visibility: hidden;
-    animation-name: text-animation;
-    animation-duration: 1s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
 }
 
 .carousel-caption p {
-    position: absolute;
     top: 50%;
     width: 63.3333333%;
     font-size: 18px;
-    text-transform: uppercase;
-    visibility: hidden;
-    animation-name: text-animation;
-    animation-duration: 1s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
+    animation-delay: 0.6s;
 }
 
-@keyframes text-animation {
-    from {
-        visibility: hidden;
-        left: 0%;
-    }
-
+@keyframes drop-in {
     to {
-        visibility: visible;
-        left: 5%;
+        opacity: 1;
+        transform: translateY(0); /* End at the original position */
     }
 }
 
@@ -496,7 +487,7 @@ video {
 
 /* RESERVATION */
 #book-main {
-    background-image: url(images/Book\ Paragliding.jpg);
+    background-image: url(images/Book\ Paragliding.webp);
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
