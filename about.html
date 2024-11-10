@@ -12,15 +12,10 @@
     <link rel="icon" type="image/x-icon" href="images/CloudBase Tandem Paragliding - Gudauri - small green logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" integrity="sha384-eoTu3+HydHRBIjnCVwsFyCpUDZHZSFKEJD0mc3ZqSBSb6YhZzRHeiomAUWCstIWo" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/brands.css">
     <link rel="stylesheet" href="assets/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/solid.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   </head>
   <body>
     <!-- ლოადერი, გვერდის ჩარტვირთამდე ლოგოს გამოატანა -->
@@ -105,28 +100,28 @@
         <div class="swiper p-0 m-0">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="images/Paragliding Team Photo - 1.jpg">
+              <img src="images/Paragliding Team Photo - 1.jpg" loading="lazy">
             </div>
             <div class="swiper-slide">
-              <img src="images/Paragliding Team Photo - 2.jpg">
+              <img src="images/Paragliding Team Photo - 2.jpg" loading="lazy">
             </div>
             <div class="swiper-slide">
-              <img src="images/Paragliding Team Photo - 3.jpg">
+              <img src="images/Paragliding Team Photo - 3.jpg" loading="lazy">
             </div>
             <div class="swiper-slide">
-              <img src="images/Tandem Paragliding Section 1-2.jpg">
+              <img src="images/Tandem Paragliding Section 1-2.jpg" loading="lazy">
             </div>
             <div class="swiper-slide">
-              <img src="images/Tandem Paragliding Clients 7.jpg">
+              <img src="images/Tandem Paragliding Clients 7.jpg" loading="lazy">
             </div>
             <div class="swiper-slide">
-              <img src="images/Tandem Paragliding Clients 2.jpg">
+              <img src="images/Tandem Paragliding Clients 2.jpg" loading="lazy">
             </div>
             <div class="swiper-slide">
-              <img src="images/Tandem Paragliding Clients 4.jpg">
+              <img src="images/Tandem Paragliding Clients 4.jpg" loading="lazy">
             </div>
             <div class="swiper-slide">
-              <img src="images/Tandem Paragliding Clients 6.jpg">
+              <img src="images/Tandem Paragliding Clients 6.jpg" loading="lazy">
             </div>
           </div>
         </div>
@@ -189,7 +184,7 @@
           </div>
           <!--UL ლოგო-->
           <div class="col w-auto logo-div p-0 m-0 mt-3">
-            <img src="images/logo-small.jpg" alt="CloudBase ParagLiding Logo">
+            <img src="images/logo-small.jpg" alt="CloudBase ParagLiding Logo" loading="lazy">
           </div>
         </div>
       </footer>
@@ -201,7 +196,7 @@
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
     <!--SWIPER-->
-    <script type="module">
+    <script type="module" defer>
       import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs'
       const swiper = new Swiper(".swiper", {
         direction: 'horizontal', 
@@ -243,47 +238,6 @@
             slidesPerGroup: 2,
           },
         }
-      });
-    </script>
-    <!-- თარგმნის კოდი -->
-    <script>
-      // Define the getCookie function
-      function getCookie(name) {
-          var nameEQ = name + "=";
-          var ca = document.cookie.split(';');
-          for(var i=0;i < ca.length;i++) {
-              var c = ca[i];
-              while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-              if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-          }
-          return null;
-      }
-  
-      // Define the setCookie function
-      function setCookie(name, value, days) {
-          var expires = "";
-          if (days) {
-              var date = new Date();
-              date.setTime(date.getTime() + (days*24*60*60*1000));
-              expires = "; expires=" + date.toUTCString();
-          }
-          document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-      }
-  
-      // Define the setCurLanguage function
-      function setCurLanguage(lang) {
-          if (!lang) lang = getCookie('cur_lang'); // get from saved cookie
-          if (!lang || lang != 'eng' && lang != 'geo') lang = 'eng'; // check and set default
-          setCookie('cur_lang', lang, 30);
-  
-          document.querySelectorAll(".translatable-text").forEach(function (value) {
-              value.innerHTML = value.getAttribute(`data-tran-${lang}`);
-          });
-      }
-  
-      // Run the setCurLanguage function on page load
-      document.addEventListener("DOMContentLoaded", function() {
-          setCurLanguage(); // changes all text to default language
       });
     </script>
   </body>
