@@ -106,6 +106,61 @@
     filter: contrast(75%);
 }
 
+@media (max-width: 800px) {
+    .carousel-img-1 {
+        background-image: url(images/Tandem\ Paragliding\ Item\ 1-800.webp);
+    }
+
+    .carousel-img-2 {
+        background-image: url(images/Tandem\ Paragliding\ Winter\ -\ 3-800.webp.webp);
+    }
+    
+    .carousel-img-4 {
+        background-image: url(images/Tandem\ Paragliding\ Item\ 3-800.webp);
+    }
+    
+    .carousel-img-5 {
+        background-image: url(images/Tandem\ Paragliding\ Item\ 4-800.webp);
+    }
+}
+
+@media (max-width: 500px) {
+    .carousel-img-1 {
+        background-image: url(images/Tandem\ Paragliding\ Item\ 1-500.webp);
+        background-position: 40% 40%;
+    }
+
+    .carousel-img-2 {
+        background-image: url(images/Tandem\ Paragliding\ Winter\ -\ 3-500.webp.webp);
+    }
+    
+    .carousel-img-4 {
+        background-image: url(images/Tandem\ Paragliding\ Item\ 3-500.webp);
+    }
+    
+    .carousel-img-5 {
+        background-image: url(images/Tandem\ Paragliding\ Item\ 4-500.webp);
+    }
+}
+
+@media (max-width: 300px) {
+    .carousel-img-1 {
+        background-image: url(images/Tandem\ Paragliding\ Item\ 1-300.webp);
+    }
+
+    .carousel-img-2 {
+        background-image: url(images/Tandem\ Paragliding\ Winter\ -\ 3-300.webp.webp);
+    }
+    
+    .carousel-img-4 {
+        background-image: url(images/Tandem\ Paragliding\ Item\ 3-300.webp);
+    }
+    
+    .carousel-img-5 {
+        background-image: url(images/Tandem\ Paragliding\ Item\ 4-300.webp);
+    }
+}
+
 .carousel-img-2 {
     background-image: url(images/Tandem\ Paragliding\ Winter\ -\ 3.webp);
     background-position: center 70%;
