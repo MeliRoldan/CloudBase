@@ -55,11 +55,8 @@
     text-transform: uppercase;
 }
 
-.nav-link:hover {
-    color: #037971;
-}
-
-.active {
+.nav-link:hover, .active , .bi-whatsapp, .price , .bookCost, .terms a, .footer ul li a,
+.footer ul li {
     color: #037971 !important;
 }
 
@@ -95,7 +92,6 @@
     background-repeat: no-repeat;
     background-position: center center;
     height: 100%;
-    filter: contrast(80%);
     -webkit-animation: zoom 25s;
     animation: zoom 25s;
 }
@@ -104,6 +100,24 @@
     background-image: url(images/Tandem\ Paragliding\ Item\ 1.webp);
     background-position: 80% 40%;
     filter: contrast(75%);
+}
+
+.carousel-img-2 {
+    background-image: url(images/Tandem\ Paragliding\ Winter\ -\ 3.webp);
+    background-position: center 70%;
+    filter: brightness(75%);
+}
+
+.carousel-img-4 {
+    background-image: url(images/Tandem\ Paragliding\ Item\ 3.webp);
+    background-position: center 80%;
+    filter: brightness(85%);
+}
+
+.carousel-img-5 {
+    background-image: url(images/Tandem\ Paragliding\ Item\ 4.webp);
+    background-position: center 70%;
+    filter: brightness(95%);
 }
 
 @media (max-width: 800px) {
@@ -159,24 +173,6 @@
     .carousel-img-5 {
         background-image: url(images/Tandem\ Paragliding\ Item\ 4-300.webp);
     }
-}
-
-.carousel-img-2 {
-    background-image: url(images/Tandem\ Paragliding\ Winter\ -\ 3.webp);
-    background-position: center 70%;
-    filter: brightness(75%);
-}
-
-.carousel-img-4 {
-    background-image: url(images/Tandem\ Paragliding\ Item\ 3.webp);
-    background-position: center 80%;
-    filter: brightness(85%);
-}
-
-.carousel-img-5 {
-    background-image: url(images/Tandem\ Paragliding\ Item\ 4.webp);
-    background-position: center 70%;
-    filter: brightness(95%);
 }
 
 @keyframes zoom {
@@ -289,13 +285,24 @@ main {
     color: white;
 }
 
+.card-body button:hover, .footer, .copy , .email-text {
+    color: #317F79;
+}
+
 .card-body button:hover {
     background-color: white;
-    color: #317F79;
     border-color: #317F79;
 }
 
 .services-img {
+    height: 383px;
+}
+
+.services-img-big {
+    height: 483px;
+}
+
+.services-img, .services-img-big  {
     height: 383px;
     width: 100%;
     object-fit: cover;
@@ -303,27 +310,14 @@ main {
     overflow: hidden;
 }
 
-.services-img-big {
-    height: 483px;
-    width: 100%;
-    object-fit: cover;
-    object-position: center center;
-    overflow: hidden;
-}
-
 @media (max-width:575px) {
-    .services-small-col {
-        height: auto;
-    }
-
-    .services-big-col {
+    .services-small-col, .services-big-col {
         height: auto;
     }
 }
 
 .footer {
     background-color: rgb(255, 255, 255);
-    color: #317F79;
     justify-content: space-between;
 }
 
@@ -360,10 +354,6 @@ main {
 .bi-instagram {
     color: #d6249f;
     color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-}
-
-.bi-whatsapp {
-    color: #037971;
 }
 
 .bi-telegram {
@@ -410,16 +400,10 @@ main {
 .footer ul li a,
 .footer ul li {
     font-family: Arial, Helvetica, sans-serif;
-    color: #037971;
     text-decoration: none;
 }
 
-.footer ul li a:hover,
-.footer ul li:hover {
-    color: #03b5aa;
-}
-
-.bi:hover {
+.footer ul li a:hover,.footer ul li:hover, .bi:hover{
     color: #03b5aa;
 }
 
@@ -492,7 +476,6 @@ video {
 
 .copy , .email-text {
     text-transform: none;
-    color: #317F79;
     text-decoration: none;
 }
 
@@ -532,7 +515,7 @@ video {
     width: 270px;
     height: 0;
     opacity: 0;
-    transition: height 5s ease-out, opacity 5s ease-out;
+    transition: height 3s ease-out, opacity 3s ease-out;
 }
 
 #image1.reveal {
@@ -577,7 +560,6 @@ video {
     }
 }
 
-
 @media (max-width: 1070px) {
     #book-main {
         height: 550px;
@@ -621,15 +603,9 @@ video {
 
 .form-select option {
     text-transform: uppercase;
-} 
-
-.price , .bookCost {
-    color: #037971;
-    
 }
 
 .terms a {
-    color: #037971;
     font-weight: 600;
     text-decoration: none;
 }
@@ -641,7 +617,6 @@ video {
 .terms a {
     font-size: 16px;
 }
-
 
 input[type="text"]:focus,
 input[type="checkbox"]:focus,

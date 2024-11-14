@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
         document.getElementById('content').style.display = 'block';
         localStorage.setItem('firstVisitDone', 'true');
       }
-    }, 3000);
+    }, 2000);
   } else {
     document.getElementById('loader').style.display = 'none';
     document.getElementById('content').style.display = 'block';
