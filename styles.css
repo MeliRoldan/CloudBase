@@ -87,13 +87,13 @@
     height: 100%;
 }
 
-.carousel-img {
+/* .carousel-img {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
     -webkit-animation: zoom 25s;
     animation: zoom 25s;
-}
+} */
 
 /* .carousel-img-1 {
     background-image: url(images/Tandem\ Paragliding\ Item\ 1.webp);
@@ -101,7 +101,7 @@
     filter: contrast(75%);
 } */
 
-.carousel-img-2 {
+/* .carousel-img-2 {
     background-image: url(images/Tandem\ Paragliding\ Winter\ -\ 3.webp);
     background-position: center 70%;
     filter: brightness(75%);
@@ -117,7 +117,7 @@
     background-image: url(images/Tandem\ Paragliding\ Item\ 4.webp);
     background-position: center 70%;
     filter: brightness(95%);
-}
+} */
 
 /* @media (max-width: 800px) {
     .carousel-img-1 {
