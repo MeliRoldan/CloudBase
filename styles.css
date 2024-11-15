@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Montserrat';
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v29/JTUQjIg1_i6t8kCHKm459WxRxC7mw9c.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -49,7 +58,6 @@
 }
 
 .nav-link {
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: #023436;
     text-transform: uppercase;
@@ -86,93 +94,6 @@
 .carousel-item {
     height: 100%;
 }
-
-/* .carousel-img {
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-    -webkit-animation: zoom 25s;
-    animation: zoom 25s;
-} */
-
-/* .carousel-img-1 {
-    background-image: url(images/Tandem\ Paragliding\ Item\ 1.webp);
-    background-position: 80% 40%;
-    filter: contrast(75%);
-} */
-
-/* .carousel-img-2 {
-    background-image: url(images/Tandem\ Paragliding\ Winter\ -\ 3.webp);
-    background-position: center 70%;
-    filter: brightness(75%);
-}
-
-.carousel-img-4 {
-    background-image: url(images/Tandem\ Paragliding\ Item\ 3.webp);
-    background-position: center 80%;
-    filter: brightness(85%);
-}
-
-.carousel-img-5 {
-    background-image: url(images/Tandem\ Paragliding\ Item\ 4.webp);
-    background-position: center 70%;
-    filter: brightness(95%);
-} */
-
-/* @media (max-width: 800px) {
-    .carousel-img-1 {
-        background-image: url(images/Tandem\ Paragliding\ Item\ 1-800.webp);
-    }
-
-    .carousel-img-2 {
-        background-image: url(images/Tandem\ Paragliding\ Winter\ -\ 3-800.webp.webp);
-    }
-    
-    .carousel-img-4 {
-        background-image: url(images/Tandem\ Paragliding\ Item\ 3-800.webp);
-    }
-    
-    .carousel-img-5 {
-        background-image: url(images/Tandem\ Paragliding\ Item\ 4-800.webp);
-    }
-}
-
-@media (max-width: 500px) {
-    .carousel-img-1 {
-        background-image: url(images/Tandem\ Paragliding\ Item\ 1-500.webp);
-        background-position: 40% 40%;
-    }
-
-    .carousel-img-2 {
-        background-image: url(images/Tandem\ Paragliding\ Winter\ -\ 3-500.webp.webp);
-    }
-    
-    .carousel-img-4 {
-        background-image: url(images/Tandem\ Paragliding\ Item\ 3-500.webp);
-    }
-    
-    .carousel-img-5 {
-        background-image: url(images/Tandem\ Paragliding\ Item\ 4-500.webp);
-    }
-}
-
-@media (max-width: 300px) {
-    .carousel-img-1 {
-        background-image: url(images/Tandem\ Paragliding\ Item\ 1-300.webp);
-    }
-
-    .carousel-img-2 {
-        background-image: url(images/Tandem\ Paragliding\ Winter\ -\ 3-300.webp.webp);
-    }
-    
-    .carousel-img-4 {
-        background-image: url(images/Tandem\ Paragliding\ Item\ 3-300.webp);
-    }
-    
-    .carousel-img-5 {
-        background-image: url(images/Tandem\ Paragliding\ Item\ 4-300.webp);
-    }
-} */
 
 @keyframes zoom {
     from {
@@ -390,7 +311,6 @@ main {
 }
 
 .footer ul {
-    font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 500;
@@ -398,7 +318,6 @@ main {
 
 .footer ul li a,
 .footer ul li {
-    font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
 }
 
