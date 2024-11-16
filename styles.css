@@ -251,6 +251,14 @@ main {
     color: #03b5aa !important;
 }
 
+.fa-icon {
+    fill: #037971 !important;
+}
+
+.fa-icon:hover, .map-li:hover .fa-icon {
+    fill: #03b5aa !important;
+}
+
 @media (max-width: 700px) {
     .footer {
         flex-direction: column;
@@ -499,14 +507,10 @@ input[type="checkbox"]:checked {
 }
 
 input#phone {
-    padding-left: 87px !important;
+    padding-left: 89px !important;
     top: 6px;
     visibility: visible !important;
-}  
-
-.intl-tel-input .flag-dropdown .selected-flag {
-  padding: 11px 16px 11px 6px;
-}
+} 
 
 .intl-tel-input {
   z-index: 99;
@@ -524,11 +528,6 @@ input#phone {
 .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
     background-color: rgba(0, 0, 0, 0.05);
 }  
-
-.iti--allow-dropdown input{
-    padding: 0 6px 0 52px;
-    margin-left: 0;
-}
 
 .iti__country-list {
     border-radius: 4px !important;
