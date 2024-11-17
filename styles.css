@@ -1,17 +1,8 @@
-@font-face {
-    font-family: 'Montserrat';
-    font-style: italic;
-    font-weight: 100 900;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/montserrat/v29/JTUQjIg1_i6t8kCHKm459WxRxC7mw9c.woff2) format('woff2');
-    unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar {
@@ -37,6 +28,7 @@
     font-size: 14px;
     color: #023436;
     text-transform: uppercase;
+    font-weight: 500;
 }
 
 .nav-link:hover, .active , .price , .bookCost, .terms a, .footer ul li a,
@@ -111,7 +103,7 @@
 }
 
 .carousel-caption h1 {
-    top: 30%;
+    top: 35%;
     font-size: 20px;
     animation-delay: 0.3s;
 }
@@ -218,6 +210,10 @@ main {
     height: 483px;
 }
 
+.services-small-col h2, .services-big-col h2 {
+    font-weight: 500;
+}
+
 .services-img, .services-img-big  {
     width: 100%;
     object-fit: cover;
@@ -245,6 +241,7 @@ main {
 .footer ul li a,
 .footer ul li {
     text-decoration: none;
+    font-weight: 500;
 }
 
 .footer-nav-ul a:hover,.footer-nav-ul:hover, .bi:hover, .map-li:hover, .map-li a:hover {
