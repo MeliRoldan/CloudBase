@@ -81,10 +81,12 @@
         <!-- RESERVATION FORM -->
         <form id="reservationForm" class="book-container m-0" onsubmit="process(event)" method="POST" action="send_email.php" novalidate>
           <!-- ფრენის დეტალები -->
-          <div class="rounded-3 book-form">
+          <div class="rounded-3 book-form py-5">
             <!-- LOCATION & PERSONS -->
             <div class="input-group m-auto" id="inputg">
-              <select class="form-select" aria-label="Default select example" id="options" onchange="onLocationChange()" name="location"></select>
+              <select class="form-select" aria-label="Default select example" id="options" onchange="onLocationChange()" name="location">
+                <option selected disabled>Location:</option>
+              </select>
               <input type="number" class="form-control" placeholder="Total persons:" id="tentacles" name="tentacles" min="1" max="20">
             </div>
             <!-- DATE -->
@@ -136,9 +138,6 @@
                 </span>
               </span>
             </p> -->
-          </div>
-          <!-- საკონტატქო პირის დეტალები -->
-          <div class="rounded-3 book-form">
             <input id="name" name="name" class="form-control m-auto my-2" type="text" placeholder="Full name:" aria-label="default input example">
             <input type="email" name="email" class="form-control m-auto my-2" id="email" placeholder="Email:">
             <input class="form-control m-auto my-2" type="tel" id="phone" name="phone" placeholder="Enter your phone number" aria-label="default input example">
