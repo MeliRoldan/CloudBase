@@ -3,7 +3,7 @@ const locations = ["Gudauri"];
 let options = document.getElementById("options");
 if (options) {
   for (let i = 0; i < locations.length; i++) {
-    options.innerHTML += `<option value="${[i]}">${locations[i]}</option>`;
+    options.innerHTML += `<option value="${[i]}" id="${locations[i]}">${locations[i]}</option>`;
   }
 };
 
@@ -114,7 +114,9 @@ function process(event) {
   event.preventDefault();
 
   document.getElementById("error-message").style.display = "none";
-
+  
+  let location = document.getElementById("options") ? document.getElementById("options").textContent : "";
+  console.log(location)
   let name = document.getElementById("name") ? document.getElementById("name").value : "";
   let email = document.getElementById("email") ? document.getElementById("email").value : "";
   let phone = document.getElementById("phone") ? document.getElementById("phone").value : "";
@@ -176,7 +178,8 @@ function process(event) {
   if (error) {
       document.getElementById("error-message").style.display = "block";
   } else {
-      alert("Form submitted successfully!");
+      // alert("Form submitted successfully!");
+      sendFormData(name, email, phone, totalPersons, date, location);
 
       document.getElementById("reservationForm").reset();
       fields.forEach(field => {
@@ -185,6 +188,29 @@ function process(event) {
       document.getElementById("flexCheckDefault").style.borderColor = "";
       document.getElementById("error-message").style.display = "none";
   }
+}
+
+// Function to send form data to PHP using fetch
+function sendFormData(name, email, phone, totalPersons, date, location) {
+  const formData = new FormData();
+  formData.append('name', name);
+  formData.append('email', email);
+  formData.append('phone', phone);
+  formData.append('totalPersons', totalPersons);
+  formData.append('date', date);
+  formData.append('location', location); 
+
+  fetch('send_email.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.text())  // Convert response to text (you could return JSON too)
+  .then(result => {
+    alert(result);  // Display the response (success or failure)
+  })
+  .catch(error => {
+    alert('Error: ' + error);
+  });
 }
 
 // წითელი ბორდერების მოშორება ბეჭდვის დროს

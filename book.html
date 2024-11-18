@@ -79,16 +79,16 @@
     <main id="book-main">
       <div class="container-fluid book-header d-flex justify-content-center align-items-center">
         <!-- RESERVATION FORM -->
-        <form id="reservationForm" class="book-container m-0" onsubmit="process(event)" novalidate>
+        <form id="reservationForm" class="book-container m-0" onsubmit="process(event)" method="POST" action="send_email.php" novalidate>
           <!-- ფრენის დეტალები -->
           <div class="rounded-3 book-form">
             <!-- LOCATION & PERSONS -->
             <div class="input-group m-auto" id="inputg">
-              <select class="form-select" aria-label="Default select example" id="options" onchange="onLocationChange()"></select>
+              <select class="form-select" aria-label="Default select example" id="options" onchange="onLocationChange()" name="location"></select>
               <input type="number" class="form-control" placeholder="Total persons:" id="tentacles" name="tentacles" min="1" max="20">
             </div>
             <!-- DATE -->
-            <input id="date" class="form-control m-auto my-2" type="text" placeholder="Date: dd/mm/yy" aria-label="default input example" maxlength="" onfocus="onFocusHandler(event)" oninput="formatDateInput(event)">
+            <input id="date" name="date" class="form-control m-auto my-2" type="text" placeholder="Date: dd/mm/yy" aria-label="default input example" maxlength="" onfocus="onFocusHandler(event)" oninput="formatDateInput(event)">
             <!-- TERMS INPUT AND MODAL -->
             <div class="form-check">
               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -139,8 +139,8 @@
           </div>
           <!-- საკონტატქო პირის დეტალები -->
           <div class="rounded-3 book-form">
-            <input id="name" class="form-control m-auto my-2" type="text" placeholder="Full name:" aria-label="default input example">
-            <input type="email" class="form-control m-auto my-2" id="email" placeholder="Email:">
+            <input id="name" name="name" class="form-control m-auto my-2" type="text" placeholder="Full name:" aria-label="default input example">
+            <input type="email" name="email" class="form-control m-auto my-2" id="email" placeholder="Email:">
             <input class="form-control m-auto my-2" type="tel" id="phone" name="phone" placeholder="Enter your phone number" aria-label="default input example">
             <p id="error-message" class="p-0 m-0 pt-3" style="color: red; display: none;">Please fill out all fields correctly.</p>
             <button type="submit" class="btn btn-success m-0 mt-3 btn-book" value="verify">Reserve</button>
