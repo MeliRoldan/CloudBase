@@ -144,6 +144,13 @@ function process(event) {
     }
   });
 
+  if (!location || location === "Location:") {
+    document.getElementById("options").style.borderColor = "red";
+    error = true;
+  } else {
+    document.getElementById("options").style.borderColor = "";
+  }
+
   if (!termsChecked) {
       document.getElementById("flexCheckDefault").style.borderColor = "red";
       error = true;
