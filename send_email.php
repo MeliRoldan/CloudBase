@@ -55,14 +55,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>';
 
     
-        // Send email and return success or error message
         if ($mail->send()) {
-            echo 'Reservation notification sent!';
+            echo 'Success';
         } else {
-            echo 'There was an issue sending the email.';
+            echo 'Error';
         }
     } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        echo "Mailer Error: {$mail->ErrorInfo}";
     }
 }
 ?>

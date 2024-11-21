@@ -3,39 +3,39 @@ const locations = ["Gudauri"];
 let options = document.getElementById("options");
 if (options) {
   for (let i = 0; i < locations.length; i++) {
-    options.innerHTML += `<option value="${[i]}" id="${locations[i]}">${locations[i]}</option>`;
+    options.innerHTML += `<option value="${locations[i]}" id="${locations[i]}">${locations[i]}</option>`;
   }
 };
 
 //ფასის განსაზღვრა არჩეული ლოაკციის მიხედვით, ამ ეტაპზე ჩათიშულია ფასის გამოატანა რადგან ერთი ლოკაციაა
-const getPrice = (myPrice) => {
-  let text = options.options[options.selectedIndex].text;
-  // let locationShow = document.getElementById('locationTag');
-  // locationShow.innerText = text + ":";
-  switch (text) {
-    case "Gudauri":
-      myPrice = 250;
-    break;
-    case "Svaneti":
-      myPrice = 350;
-    break;
-    case "Tbilisi":
-      myPrice = 150;
-    break;
-    case "Gonio":
-      myPrice = 60;
-    break;
-    case "Sighnaghi":
-      myPrice = 100;
-    break;
-    default:
-      myPrice = 0;
-    break;
-  };
-  // let priceShow = document.getElementById('priceTag');
-  // priceShow.innerText = myPrice + " GEL";
-  return myPrice;
-};
+// const getPrice = (myPrice) => {
+//   let text = options.options[options.selectedIndex].text;
+//   // let locationShow = document.getElementById('locationTag');
+//   // locationShow.innerText = text + ":";
+//   switch (text) {
+//     case "Gudauri":
+//       myPrice = 250;
+//     break;
+//     case "Svaneti":
+//       myPrice = 350;
+//     break;
+//     case "Tbilisi":
+//       myPrice = 150;
+//     break;
+//     case "Gonio":
+//       myPrice = 60;
+//     break;
+//     case "Sighnaghi":
+//       myPrice = 100;
+//     break;
+//     default:
+//       myPrice = 0;
+//     break;
+//   };
+//   // let priceShow = document.getElementById('priceTag');
+//   // priceShow.innerText = myPrice + " GEL";
+//   return myPrice;
+// };
 
 // ეს კოდი იყო ფასის დასათვლელად და გამოსატანად, ამ ეტაპზე არაა საჭირო
 // const getQuantity = (myQuantity) => {
@@ -54,10 +54,10 @@ const getPrice = (myPrice) => {
 //   return total;
 // };
 
-function onLocationChange() {
-  getPrice();
-  // getQuantity(); ეს კოდი იყო ფასის დასათვლელად და გამოსატანად, ამ ეტაპზე არაა საჭირო
-};
+// function onLocationChange() {
+//   getPrice();
+//   // getQuantity(); ეს კოდი იყო ფასის დასათვლელად და გამოსატანად, ამ ეტაპზე არაა საჭირო
+// };
 
 // თარიღის ფლეისჰოლდერის ფორმატირება
 function onFocusHandler(event) {
@@ -115,7 +115,7 @@ function process(event) {
 
   document.getElementById("error-message").style.display = "none";
   
-  let location = document.getElementById("options") ? document.getElementById("options").textContent : "";
+  let location = document.getElementById("options") ? document.getElementById("options").value : "";
   console.log(location)
   let name = document.getElementById("name") ? document.getElementById("name").value : "";
   let email = document.getElementById("email") ? document.getElementById("email").value : "";
@@ -204,9 +204,15 @@ function sendFormData(name, email, phone, totalPersons, date, location) {
     method: 'POST',
     body: formData
   })
-  .then(response => response.text())  // Convert response to text (you could return JSON too)
+  .then(response => response.text())
   .then(result => {
-    alert(result);  // Display the response (success or failure)
+    if (result.includes("Success")) {
+      const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+      successModal.show();
+    } else {
+      const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+      errorModal.show();
+    }
   })
   .catch(error => {
     alert('Error: ' + error);
