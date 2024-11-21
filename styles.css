@@ -262,6 +262,7 @@ main {
         justify-content: center;
         align-items: center;
         text-align: center;
+        padding:0 !important;
     }
 }
 
@@ -536,4 +537,8 @@ input#phone {
     box-shadow: 0 0 16px 0 rgb(0 0 0 / 8%) !important;
     border: 1px solid #ececec !important;
     width: 270px !important;
+}
+
+#successModalLabel {
+    color:#198754 !important;
 }
