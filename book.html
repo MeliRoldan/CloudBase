@@ -9,7 +9,7 @@
   </style>
   <title>CloudBase Paragliding Team Gudauri - Tandem Paragliding</title>
   <link rel="icon" type="image/x-icon" href="images/CloudBase Tandem Paragliding - Gudauri - small green logo.png">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="minified.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css" crossorigin="anonymous" />
@@ -33,8 +33,8 @@
       <!--NAVBAR-BRAND-->
       <div class="flags_div d-inline">
         <a class="navbar-brand" href="index.html" title="CloudBase Homepage"><span>CloudBase</span></a>
-        <button class="flag" onclick="setCurLanguage('eng')">EN</button>
-        <button class="flag" onclick="setCurLanguage('geo')">GE</button>
+        <button class="flag" onclick="setCurLanguage('eng')">ENG</button>
+        <button class="flag" onclick="setCurLanguage('geo')">GEO</button>
       </div>
       <!--NAVBAR_COLLAPSE-->
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
@@ -83,40 +83,71 @@
           <!-- ფრენის დეტალები -->
           <div class="rounded-3 book-form py-5">
             <!-- LOCATION & PERSONS -->
-            <div class="input-group m-auto" id="inputg">
-              <select class="form-select" aria-label="Default select example" id="options" onchange="" name="location" aria-placeholder="Location:">
-                <option selected disabled>Location:</option>
-              </select>
-              <input type="number" class="form-control" placeholder="Total persons:" id="tentacles" name="tentacles" min="1" max="20">
+            <div class="input-group m-auto mb-1">
+                <select class="form-select" aria-label="Default select example" id="options" onchange="onLocationChange()" name="location" aria-placeholder="Location:">
+                  <option selected disabled data-option-eng="Location:" data-option-geo="ლოკაცია:">Location:</option>
+                </select>
+                <input type="number" class="form-control" placeholder="Total persons:" data-placeholder-eng="Total persons:" data-placeholder-geo="მგზავ. რაოდ.:" id="tentacles" name="tentacles" min="1" max="20">
             </div>
             <!-- DATE -->
-            <input id="date" name="date" class="form-control m-auto my-2" type="text" placeholder="Date: dd/mm/yy" aria-label="default input example" maxlength="" onfocus="onFocusHandler(event)" oninput="formatDateInput(event)">
+            <input id="date" name="date" class="form-control m-auto my-2" type="text" placeholder="dd/mm/yy" data-placeholder-eng="dd/mm/yy" data-placeholder-geo="დდ/თთ/წწ" aria-label="default input example" maxlength="" onfocus="onFocusHandler(event)" oninput="formatDateInput(event)">
             <!-- TERMS INPUT AND MODAL -->
             <div class="form-check">
               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
               <!-- Button trigger modal -->
               <label class="form-check-label terms" for="flexCheckDefault">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Price List & Terms</a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="translatable-text" data-tran-eng="Terms & Conditions" data-tran-geo="წესები და პირობები">Terms & Conditions</span></a>
               </label>
               <!-- Modal -->
               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-centered">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h1 class="modal-title fs-5 text-uppercase" id="exampleModalLabel">Price List & Terms</h1>
+                      <h1 class="modal-title fs-5 text-uppercase" id="exampleModalLabel"><span class="translatable-text" data-tran-eng="Terms & Conditions" data-tran-geo="წესები და პირობები">Terms & Conditions</span></h1>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body text-uppercase">
-                      <h6 class="fw-bold">1. PRICE LIST</h6>
-                      <p>Tandem Paragliding: 350 GEL</p>
-                      <p>Tandem Paragliding (Weight: above 100kg): 400 GEL</p>
-                      <p>Tandem Paragliding (Time: 30 min and more): 400 GEL</p>
-                      <p>Acro Tandem Paragliding: 450 GEL</p>
-                      <h6 class="fw-bold">2. TERMS</h6>
-                      <p>The collection and processing of these data is generally done in anonymised form without any personal link for the purpose of facilitating the usage of the website (establishment of the connection), to guarantee the system security and stability in the long term and to optimise the internet services and for internal statistical purposes. The information mentioned above will not be linked to or saved with personal data. Only in the event of an attack against the network infrastructure of ADVANCE Thun AG or in the event of suspicion of other unauthorised or improper use of the website will the IP address be analysed for investigation and for protection and, if applicable, used in criminal proceedings for identification and for action under civil and criminal law against the respective users.</p>
+                      <p><span class="translatable-text" data-tran-eng="Welcome to Cloudbase Paragliding! By booking a flight with us, you agree to the following terms and conditions. Please read them carefully before confirming your reservation." data-tran-geo="Welcome to Cloudbase Paragliding! By booking a flight with us, you agree to the following terms and conditions. Please read them carefully before confirming your reservation.">Welcome to Cloudbase Paragliding! By booking a flight with us, you agree to the following terms and conditions. Please read them carefully before confirming your reservation.</span></p>
+                      <h6 class="fw-bold"><span class="translatable-text" data-tran-eng="1. Flight Packages and Pricing" data-tran-geo="1. ფრენის დეტალები">1. Flight Packages and Pricing</span></h6>
+                      <p><span class="translatable-text" data-tran-eng="Flight Duration:" data-tran-geo="ფრენის ხანგრძლივობა">Flight Duration:</span></p>
+                      <ul>
+                        <li><span class="translatable-text" data-tran-eng="Summer: Standard flights last 10–15 minutes." data-tran-geo="ზაფხული: სტანდარტული ფრენის ხანგრძლივობა შეადგენს 10-15 წუთს.">Summer: Standard flights last 10–15 minutes.</span></li>
+                        <li><span class="translatable-text" data-tran-eng="Winter: Standard flights last approximately 10 minutes." data-tran-geo="ზამთარი:  სტანდარტული ფრენის ხანგრძლივობა შეადგენს დაახლოებით 10 წუთს.">Winter: Standard flights last approximately 10 minutes.</span></li>
+                      </ul>
+                      <p><span class="translatable-text" data-tran-eng="Take-Off Spots: We operate from two different take-off locations depending on the season." data-tran-geo="Take-Off Spots: We operate from two different take-off locations depending on the season.">Take-Off Spots: We operate from two different take-off locations depending on the season.</span></p>
+                      <p><span class="translatable-text" data-tran-eng="Winter Flights: An additional fee applies for ski lift tickets required to access the starting point." data-tran-geo="Winter Flights: An additional fee applies for ski lift tickets required to access the starting point.">Winter Flights: An additional fee applies for ski lift tickets required to access the starting point.</span></p>
+                      <h6 class="fw-bold"><span class="translatable-text" data-tran-eng="2. Weather Dependency" data-tran-geo="2. Weather Dependency">2. Weather Dependency</span></h6>
+                      <p><span class="translatable-text" data-tran-eng="Paragliding is a weather-dependent activity. While we strive to deliver the flight package you choose:" data-tran-geo="Paragliding is a weather-dependent activity. While we strive to deliver the flight package you choose:">Paragliding is a weather-dependent activity. While we strive to deliver the flight package you choose:</span</p>
+                      <ul>
+                        <li><span class="translatable-text" data-tran-eng="Long duration flights may not always be possible due to weather conditions." data-tran-geo="Long duration flights may not always be possible due to weather conditions.">Long duration flights may not always be possible due to weather conditions.</span></li>
+                        <li><span class="translatable-text" data-tran-eng="Acro flights might have reduced flight time depending on the day’s conditions." data-tran-geo="Acro flights might have reduced flight time depending on the day’s conditions.">Acro flights might have reduced flight time depending on the day’s conditions.</span></li>
+                      </ul>
+                      <p><span class="translatable-text" data-tran-eng="Safety is our top priority, and decisions on flight adjustments are made by our experienced pilots." data-tran-geo="Safety is our top priority, and decisions on flight adjustments are made by our experienced pilots.">Safety is our top priority, and decisions on flight adjustments are made by our experienced pilots.</span></p>
+                      <h6 class="fw-bold"><span class="translatable-text" data-tran-eng="3. Passenger Requirements" data-tran-geo="3. Passenger Requirements">3. Passenger Requirements</span></h6>
+                      <ul>
+                        <li><span class="translatable-text" data-tran-eng="Passengers must weigh between 20kg and 130kg." data-tran-geo="Passengers must weigh between 20kg and 130kg.">Passengers must weigh between 20kg and 130kg.</span></li>
+                        <li><span class="translatable-text" data-tran-eng="Passengers weighing between 95kg and 130kg will incur an additional fee as noted above." data-tran-geo="Passengers weighing between 95kg and 130kg will incur an additional fee as noted above.">Passengers weighing between 95kg and 130kg will incur an additional fee as noted above.</span></li>
+                      </ul>
+                      <h6 class="fw-bold"><span class="translatable-text" data-tran-eng="4. Booking and Personal Information" data-tran-geo="4. Booking and Personal Information">4. Booking and Personal Information</span></h6>
+                      <ul>
+                        <li><span class="translatable-text" data-tran-eng="Information provided during the booking process will only be used for scheduling and customer service purposes." data-tran-geo="Information provided during the booking process will only be used for scheduling and customer service purposes.">Information provided during the booking process will only be used for scheduling and customer service purposes.</span></li>
+                        <li><span class="translatable-text" data-tran-eng="Your information will not be shared with third parties or stored beyond the time needed to facilitate your booking." data-tran-geo="Your information will not be shared with third parties or stored beyond the time needed to facilitate your booking.">Your information will not be shared with third parties or stored beyond the time needed to facilitate your booking.</span></li>
+                      </ul>
+                      <h6 class="fw-bold"><span class="translatable-text" data-tran-eng="5. Payment and Cancellations" data-tran-geo="5. Payment and Cancellations">5. Payment and Cancellations</span></h6>
+                      <ul>
+                        <li><span class="translatable-text" data-tran-eng="Payment can be made at flight day with cash (GEL, Euros or $) or by card (extra 10GEL for per person)" data-tran-geo="Payment can be made at flight day with cash (GEL, Euros or $) or by card (extra 10GEL for per person)">Payment can be made at flight day with cash (GEL, Euros or $) or by card (extra 10GEL for per person)</span></li>
+                        <li><span class="translatable-text" data-tran-eng="In the event of cancellation due to unfavorable weather, you will have the option to reschedule" data-tran-geo="In the event of cancellation due to unfavorable weather, you will have the option to reschedule">In the event of cancellation due to unfavorable weather, you will have the option to reschedule</span></li>
+                      </ul>
+                      <h6 class="fw-bold"><span class="translatable-text" data-tran-eng="6. Safety and Liability" data-tran-geo="6. Safety and Liability">6. Safety and Liability</span></h6>
+                      <ul>
+                        <li><span class="translatable-text" data-tran-eng="All our pilots are licensed, insured, and members of the Georgian Paragliding Federation." data-tran-geo="All our pilots are licensed, insured, and members of the Georgian Paragliding Federation.">All our pilots are licensed, insured, and members of the Georgian Paragliding Federation.</span></li>
+                        <li><span class="translatable-text" data-tran-eng="By booking a flight, you acknowledge the inherent risks of paragliding and agree to follow all safety instructions provided by our pilots." data-tran-geo="By booking a flight, you acknowledge the inherent risks of paragliding and agree to follow all safety instructions provided by our pilots.">By booking a flight, you acknowledge the inherent risks of paragliding and agree to follow all safety instructions provided by our pilots.</span></li>
+                      </ul>
+                      <h6 class="fw-bold"><span class="translatable-text" data-tran-eng="7. Changes to Packages or Terms" data-tran-geo="7. Changes to Packages or Terms">7. Changes to Packages or Terms</span></h6>
+                      <p><span class="translatable-text" data-tran-eng="Cloudbase Paragliding reserves the right to modify flight packages, prices, or terms and conditions without prior notice. However, we will honor the terms agreed upon at the time of booking." data-tran-geo="Cloudbase Paragliding reserves the right to modify flight packages, prices, or terms and conditions without prior notice. However, we will honor the terms agreed upon at the time of booking.">Cloudbase Paragliding reserves the right to modify flight packages, prices, or terms and conditions without prior notice. However, we will honor the terms agreed upon at the time of booking.</span></p>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-outline-dark text-uppercase" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-outline-dark text-uppercase" data-bs-dismiss="modal"><span class="translatable-text" data-tran-eng="Close" data-tran-geo="დახურვა">Close</span></button>
                     </div>
                   </div>
                 </div>
@@ -138,15 +169,50 @@
                 </span>
               </span>
             </p> -->
-            <input id="name" name="name" class="form-control m-auto my-2" type="text" placeholder="Full name:" aria-label="default input example">
-            <input type="email" name="email" class="form-control m-auto my-2" id="email" placeholder="Email:">
-            <input class="form-control m-auto my-2" type="tel" id="phone" name="phone" placeholder="Enter your phone number" aria-label="default input example">
-            <p id="error-message" class="p-0 m-0 pt-3" style="color: red; display: none;">Please fill out all fields correctly.</p>
-            <button id="form-btn" type="submit" class="btn btn-success m-0 mt-3 btn-book" value="verify">Reserve</button>
+            <input id="name" name="name" class="form-control m-auto my-2" type="text" placeholder="Full name:" data-placeholder-eng="Full name:" data-placeholder-geo="სახელი, გვარი:" aria-label="default input example">
+            <input type="email" name="email" class="form-control m-auto my-2" id="email" placeholder="Email:" data-placeholder-eng="Email:" data-placeholder-geo="ელ. ფოსტა:" >
+            <input class="form-control m-auto my-2" type="tel" id="phone" name="phone" placeholder="Phone number:" data-placeholder-eng="Phone number:" data-option-geo="blaaa" aria-label="default input example">
+            <p id="error-message" class="p-0 m-0 pt-3" style="color: red; display: none;"><span class="translatable-text" data-tran-eng="Please fill out all fields correctly." data-tran-geo="გთხოვთ, სწორად შეავსოთ ყველა ველი.">Please fill out all fields correctly.</span></p>
+            <button id="form-btn" type="submit" class="btn btn-success m-0 mt-3 btn-book" value="verify"><span class="translatable-text" data-tran-eng="Reserve" data-tran-geo="დაჯავშნა">Reserve</span></button>
           </div>
         </form>
       </div>
     </main>
+
+    <div id="successModal" class="modal fade" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="successModalLabel"><span class="translatable-text" data-tran-eng="Reservation Successfu" data-tran-geo="რეზერვაცია მიღებულია">Reservation Successful</span></h5>
+          </div>
+          <div class="modal-body">
+            <p><span class="translatable-text" data-tran-eng="Thank you for your reservation! Our representative will contact you shortly with further details." data-tran-geo="მადლობა რეზერვაციისთვის! ჩვენი წარმომადგენელი დაგიკავშირდებათ დამატებითი დეტალების შესახებ.">Thank you for your reservation! Our representative will contact you shortly with further details.</span></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="errorModal" class="modal fade" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="errorModalLabel"><span class="translatable-text" data-tran-eng="Reservation Issue" data-tran-geo="ჯავშნის შეცდომა">Reservation Issue</span></h5>
+          </div>
+          <div class="modal-body">
+            <p><span class="translatable-text" data-tran-eng="We encountered an issue while processing your reservation. Please contact us to complete your booking:" data-tran-geo="ჯავშნის დროს მოხდა ტექნიკური ხარვეზი. გთხოვთ, დაგვიკავშირდით ჯავშნის დასასრულებლად:">We encountered an issue while processing your reservation. Please contact us to complete your booking:</span></p>
+            <p><span class="translatable-text" data-tran-eng="Phone:" data-tran-geo="ტელ.:">Phone:</span>+995 511 20 30 30</p>
+            <p><span class="translatable-text" data-tran-eng="WhatsApp:" data-tran-geo="WhatsApp:">WhatsApp:</span> <a title="CloudBase Whatsapp link" target="_blank" href="https://wa.me/995511203030"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16"> <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg></a></p>
+            <p><span class="translatable-text" data-tran-eng="Email:" data-tran-geo="ელ. ფოსტა:">Email:</span> cloudbaseparaglidingofficial@gmail.com</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><span class="translatable-text" data-tran-eng="Close" data-tran-geo="დახურვა">Close</span></button>
+          </div>
+        </div>
+      </div>
+    </div>   
     
     <!---FOOTER-->
     <footer class="container-fluid bg-white pb-5">
@@ -206,48 +272,13 @@
           <img src="images/logo-small.webp" alt="CloudBase ParagLiding Logo" loading="lazy">
         </div>
       </div>
-    </footer>
-
-    <div id="successModal" class="modal fade" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="successModalLabel">Reservation Successful</h5>
-          </div>
-          <div class="modal-body">
-            <p>Thank you for your reservation! Our representative will contact you shortly with further details.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div id="errorModal" class="modal fade" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="errorModalLabel">Reservation Issue</h5>          </div>
-          <div class="modal-body">
-            <p>We encountered an issue while processing your reservation. Please contact us to complete your booking:</p>
-            <p>
-              <strong>Phone/WhatsApp:</strong> +995 511 20 30 30<br>
-              <strong>Email:</strong> cloudbaseparaglidingofficial@gmail.com
-            </p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>    
+    </footer> 
   </div>
 
   <!--კოდი-->
   <script src="reservation.js" defer></script>
   <script src="js.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/a11y-dialog@4.1.0/dist/a11y-dialog.min.js" defer></script>
   <!-- ტელეფონების კოდი -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js'></script>
@@ -263,15 +294,11 @@
       preferredCountries: ['ge', 'ru', 'us', 'gb'], // Optional: default countries
       nationalMode: true, // National phone number format
       separateDialCode: true, // Add the country code in the input
-      customPlaceholder: "Enter your phone number" // Custom placeholder
     });
 
     if (!iti.getSelectedCountryData().iso2) {
       iti.setCountry('ge'); // Manually set to a default country like 'us'
     }
-    
-    // Manually set the placeholder text if necessary
-    input.setAttribute('placeholder', 'Phone number:');
     
     // Optional: Populate country code dropdown
     var countryData = window.intlTelInputGlobals.getCountryData();  

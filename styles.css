@@ -542,3 +542,13 @@ input#phone {
 #successModalLabel {
     color:#198754 !important;
 }
+
+.modal {
+    display: none;
+    visibility: hidden;
+}
+
+.modal.show {
+    display: block;
+    visibility: visible;
+}

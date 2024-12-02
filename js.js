@@ -23,7 +23,6 @@ window.addEventListener('load', () => {
 
 document.addEventListener("DOMContentLoaded", function() {
   const navLinks = document.querySelectorAll(".nav-link");
-  
   const currentPath = window.location.pathname;
 
   // მენიუს ლინკებისთვის აქტიური სტატუსის მინიჭება
@@ -66,6 +65,27 @@ function setCurLanguage(lang) {
   document.querySelectorAll(".translatable-text").forEach(function(value) {
       value.innerHTML = value.getAttribute(`data-tran-${lang}`);
   });
+
+  document.querySelectorAll("[data-placeholder-eng][data-placeholder-geo]").forEach(function(input) {
+    input.placeholder = input.getAttribute(`data-placeholder-${lang}`);
+  });
+
+  document.querySelectorAll("select option[data-option-eng][data-option-geo]").forEach(function(option) {
+    option.textContent = option.getAttribute(`data-option-${lang}`);
+  });
+
+  document.querySelectorAll("select option[data-option-eng][data-option-geo]").forEach(function(option) {
+    option.textContent = option.getAttribute(`data-option-${lang}`);
+  });
+
+  const phoneInput = document.querySelector('#phone');
+  if (phoneInput) {
+    if (lang === 'geo') {
+      phoneInput.setAttribute('placeholder', 'ტელეფონი:');
+    } else {
+      phoneInput.setAttribute('placeholder', phoneInput.getAttribute('data-placeholder-eng'));
+    }
+  }
 }
 
 document.addEventListener("DOMContentLoaded", function() {

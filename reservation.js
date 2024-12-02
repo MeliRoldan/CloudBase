@@ -1,11 +1,16 @@
 // ლოკაციების სია და გამოატანა სელექთის დროფდაუნად, ამ ეტაპზე მხოლოდ 1 ლოკაციაა
-const locations = ["Gudauri"];
+const locations = [{ eng: "Gudauri", geo: "გუდაური" }];
 let options = document.getElementById("options");
 if (options) {
-  for (let i = 0; i < locations.length; i++) {
-    options.innerHTML += `<option value="${locations[i]}" id="${locations[i]}">${locations[i]}</option>`;
-  }
-};
+  locations.forEach(location => {
+    const option = document.createElement("option");
+    option.value = location.eng; // Use the English name as the value
+    option.setAttribute("data-option-eng", location.eng);
+    option.setAttribute("data-option-geo", location.geo);
+    option.textContent = location.eng; // Default to English text
+    options.appendChild(option);
+  });
+}
 
 //ფასის განსაზღვრა არჩეული ლოაკციის მიხედვით, ამ ეტაპზე ჩათიშულია ფასის გამოატანა რადგან ერთი ლოკაციაა
 // const getPrice = (myPrice) => {
@@ -54,10 +59,16 @@ if (options) {
 //   return total;
 // };
 
-// function onLocationChange() {
-//   getPrice();
-//   // getQuantity(); ეს კოდი იყო ფასის დასათვლელად და გამოსატანად, ამ ეტაპზე არაა საჭირო
-// };
+function onLocationChange() {
+  if (!location || location === "Location:" || location === "ლოკაცია:") {
+    document.getElementById("options").style.borderColor = "red";
+    error = true;
+  } else {
+    document.getElementById("options").style.borderColor = "";
+  }
+  //getPrice();
+  // getQuantity(); ეს კოდი იყო ფასის დასათვლელად და გამოსატანად, ამ ეტაპზე არაა საჭირო
+};
 
 // თარიღის ფლეისჰოლდერის ფორმატირება
 function onFocusHandler(event) {
@@ -144,7 +155,7 @@ function process(event) {
     }
   });
 
-  if (!location || location === "Location:") {
+  if (!location || location === "Location:" || location === "ლოკაცია:") {
     document.getElementById("options").style.borderColor = "red";
     error = true;
   } else {
@@ -185,7 +196,6 @@ function process(event) {
   if (error) {
       document.getElementById("error-message").style.display = "block";
   } else {
-      // alert("Form submitted successfully!");
       sendFormData(name, email, phone, totalPersons, date, location);
 
       document.getElementById("reservationForm").reset();
@@ -216,9 +226,11 @@ function sendFormData(name, email, phone, totalPersons, date, location) {
     if (result.includes("Success")) {
       const successModal = new bootstrap.Modal(document.getElementById('successModal'));
       successModal.show();
+      document.getElementById('successModal').focus();
     } else {
       const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
       errorModal.show();
+      document.getElementById('errorModal').focus();
     }
   })
   .catch(error => {
